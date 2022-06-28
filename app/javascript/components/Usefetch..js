@@ -1,29 +1,22 @@
-import React from "react";
-import React, { useEffect } from 'react';
-import { useState } from "react";
+import React, { useEffect, useState } from 'react';
+import axios from "axios";
 
-function Usefetch() {
-  const [data, setData] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+function Usefetch(url) {
 
-  useEffect(() => {
+    const [data, setData] = useState(null);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
 
-     fetch('https://filrouge.uha4point0.fr/V2/shop/clients').then(response => {
-        if (response.ok) {
-          return response.json()
-        }
-        throw response;
-      }).then(data => {
-        setData(data);
-      }).catch(error => {
-        console.error('Error fetching data', error);
-        setError(error);
-      }).finally(() => {
-        setLoading(false);
-      })
-
-    }, []);
+    useEffect(() => {
+        setLoading(true);
+        axios.get(url).then((response) => {
+            setData(response.data);
+        }).catch((error) => {
+            setError(console.log(error));
+        }).finally(() => {
+            setLoading(false);
+        });
+    }, [url])
 
 
     return {data, loading, error}
