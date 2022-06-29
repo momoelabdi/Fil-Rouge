@@ -1,8 +1,12 @@
 class ClientsController < ApplicationController
-  def inde
-    @client = Clients.all
-  end
+
+  # def index
+  #   @client = @data.App(data),
+  #   @client = Clients.all
+  # end
+
   def show
-    @client = Clients.find(params[ :id,  :name])
+    @client = Clients.find(params[:pseudo, :nom])
   end
+
 end

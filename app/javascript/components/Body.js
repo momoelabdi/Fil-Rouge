@@ -1,18 +1,12 @@
 import React from 'react';
+
+
+
 import { BrowserRouter as Router, Routes, Route, Link  } from "react-router-dom";
-import Usefetch from '../components/Usefetch.';
-import Body from '../components/Body';
 
-
-function App() {
-  const {data, loading, error} = Usefetch("https://filrouge.uha4point0.fr/V2/shop/clients");
-  if (loading) {<h1>Loading...</h1>};
-  if (error) console.log(error);
-
+function Body() {
   return (
-    <div>
-      <div>
-      {/* <Router>
+    <Router>
       <nav id='nav'>
         <Link className='navBar' to="/">Home</Link>
         <Link className='navBar' to="about"> About</Link>
@@ -20,7 +14,7 @@ function App() {
         <Link className='navBar' to="prices"> Prices</Link>
       </nav>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<index.html.erb />} />
         <Route path="/about" element={<About />} />
         <Route path="/offers" element={<Offers />} />
         <Route path="/prices" element={<Prices />} />
@@ -40,22 +34,8 @@ function App() {
           <Link className='fobar' to="prices"> Prices</Link>
         </div>
       </div>
-    </Router> */}
-      </div>
-      <Body />
-      <h2>Clients details </h2>
-      {data?.map(d  => {
-        return(
-          <div key={d.id}>
-            <p>name :{d.nom}</p>
-            <p>nickname :{d.pseudo}</p>
-          </div>
-        )
-      })}
-
-
-    </div>
-  );
+    </Router>
+   );
 }
 
-export default App;
+export default Body;

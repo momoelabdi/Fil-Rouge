@@ -13,3 +13,393 @@
  *= require_tree .
  *= require_self
  */
+
+
+
+
+ /* #nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  padding: 5%;
+}
+
+
+
+.navBar{
+  text-align: center;
+  padding-left: 15%;
+  color: #FFFF;
+  text-decoration: none;
+  font-family: 'Roboto ', monospace;
+
+}
+
+
+
+#nav :hover {
+  color: rgb(179, 183, 183);
+}
+
+
+#tittle {
+  padding-left: 5%;
+  margin: auto;
+  margin-bottom: 3%;
+
+
+}
+
+
+.home-text {
+  padding: 5%;
+  align-items: center;
+}
+
+
+.fotos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+@media (min-width: 100px) and (max-width: 575px) {
+  .fotos {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 576px) {
+  .fotos {
+    grid-template-columns: 1fr;
+  }
+}
+@media (min-width: 768px) {
+  .fotos {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 992px) {
+  .fotos {
+    grid-template-columns:  1fr 1fr;
+  }
+}
+
+@media (min-width: 1200px) {
+  .fotos {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+
+.fOne > img {
+  opacity: 1;
+  width: 100%;
+  height: auto;
+}
+
+
+.footer {
+  display: grid;
+  grid-template-columns:  2fr 2fr  ;
+  gap: 10%;
+  margin-top: 8%;
+  margin-bottom: 5%;
+  background-color: hwb(58 3% 27% / 0.982);
+  padding-bottom: 5%;
+}
+
+.footer > .links {
+  display: grid;
+  margin-top: -1%;
+  margin-left: 25%;
+
+}
+.fobar {
+  text-decoration: none;
+  color: #FFFF;
+
+
+}
+
+.footer > .contacts {
+
+  margin-left: 15%;
+  width: 100%;
+  height: auto;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  color: #FFFF;
+  display: grid;
+}
+
+
+.contacts h2 {
+
+}
+
+.contacts a {
+  text-decoration: none;
+  color: #FFFF;
+
+}
+a:hover {
+  color: rgb(179, 183, 183);
+}
+
+.links > h2 {
+
+  color: #FFFF;
+
+}
+
+
+.about {
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  gap: 10%;
+
+  padding-top: 10%;
+  margin-bottom: 8%;
+}
+
+.about-us {
+
+  width: 100%;
+  height: auto;
+  margin-left: 5%;
+}
+.fabout > img {
+  margin-right: 5%;
+  width: 100%;
+  height: auto;
+  margin-left: -10%;
+  margin-bottom: 20%;
+}
+
+
+
+
+
+
+
+:root {
+	--card-height: auto;
+	--card-margin: 4vw;
+	--card-top-offset: 1em;
+	--numcards: 4;
+	--outline-width: 0px;
+}
+
+#cards {
+	padding-bottom: calc(var(--numcards) * var(--card-top-offset));
+	margin-bottom: var(--card-margin);
+}
+#card_1 {
+	--index: 1;
+}
+
+#card_2 {
+	--index: 2;
+}
+
+#card_3 {
+	--index: 3;
+}
+
+#card_4 {
+	--index: 4;
+}
+
+.card {
+	position: sticky;
+	top: 0;
+	padding-top: calc(var(--index) * var(--card-top-offset));
+}
+
+@supports (animation-timeline: works) {
+
+	@scroll-timeline cards-element-scrolls-in-body {
+		source: selector(body);
+		scroll-offsets:
+
+			selector(#cards) start 1,
+
+			selector(#cards) start 0
+		;
+		start: selector(#cards) start 1;
+		end: selector(#cards) start 0;
+		time-range: 4s;
+	}
+
+	.card {
+		--index0: calc(var(--index) - 1);
+		--reverse-index: calc(var(--numcards) - var(--index0));
+		--reverse-index0: calc(var(--reverse-index) - 1);
+	}
+
+	.card__content {
+		transform-origin: 50% 0%;
+		will-change: transform;
+
+		--duration: calc(var(--reverse-index0) * 1s);
+		--delay: calc(var(--index0) * 1s);
+
+		animation: var(--duration) linear scale var(--delay) forwards;
+		animation-timeline: cards-element-scrolls-in-body;
+	}
+
+	@keyframes scale {
+		to {
+			transform:
+				scale(calc(
+					1.1
+					-
+					calc(0.1 * var(--reverse-index))
+				));
+		}
+	}
+}
+
+
+
+#debug {
+  position: fixed;
+  top: 1em;
+  left: 1em;
+}
+#debug::after {
+  content: " Show Debug";
+  margin-left: 1.5em;
+  color: white;
+  white-space: nowrap;
+}
+
+#debug:checked ~ main {
+  --outline-width: 1px;
+}
+
+
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: rgb(2, 4, 8);
+	color: rgb(255, 255, 255);
+
+	font-size: calc(1em + 0.5vw);
+}
+
+header,
+main {
+	width: 80vw;
+	margin: 0 auto;
+}
+
+#cards {
+	list-style: none;
+	outline: calc(var(--outline-width) * 10) solid blue;
+
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: repeat(var(--numcards), var(--card-height));
+	gap: var(--card-margin);
+}
+
+.card {
+	outline: var(--outline-width) solid hotpink;
+}
+
+.card__content {
+	box-shadow: 0 0.2em 1em rgba(0, 0, 0, 0.1), 0 1em 2em rgba(0, 0, 0, 0.1);
+	background: rgb(255, 255, 255);
+	color: rgb(10, 5, 7);
+	border-radius: 1em;
+	overflow: hidden;
+
+	display: grid;
+	grid-template-areas: "text img";
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: auto;
+	align-items: stretch;
+	outline: var(--outline-width) solid lime;
+}
+
+.card__content > div {
+	grid-area: text;
+	width: 80%;
+	place-self: center;
+	text-align: left;
+	display: grid;
+	gap: 1em;
+	place-items: start;
+}
+
+.card__content > figure {
+	grid-area: img;
+	overflow: hidden;
+}
+
+.card__content > figure > img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+h1 {
+	font-weight: 300;
+	font-size: 2.5em;
+}
+
+h2 {
+	font-weight: 300;
+	font-size: 1.5em;
+}
+
+p {
+	font-family: sans-serif;
+	font-weight: 300;
+	line-height: 1.42;
+}
+
+.btn {
+	background: rgb(231, 146, 48);
+	color: rgb(255 255 255);
+	text-decoration: none;
+	display: inline-block;
+	padding: 0.5em;
+	border-radius: 0.25em;
+}
+
+aside {
+	width: 50vw;
+	margin: 0 auto;
+	text-align: left;
+  margin-top: 1em;
+}
+
+aside p {
+	margin-bottom: 1em;
+}
+
+
+
+.prices {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10%;
+}
+
+.prices > .day {
+  margin-left: 10%;
+  border-radius: 3%;
+}
+
+.prices > .project {
+  margin-right: 5%;
+} */
