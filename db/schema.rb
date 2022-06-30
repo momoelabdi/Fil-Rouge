@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_06_30_111010) do
+ActiveRecord::Schema.define(version: 2022_06_30_151707) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,17 +28,24 @@ ActiveRecord::Schema.define(version: 2022_06_30_111010) do
   end
 
   create_table "commandes", force: :cascade do |t|
-    t.string "commande_id"
+    t.string "date_de_reservation"
     t.bigint "client_id", null: false
-    t.text "products"
-    t.datetime "date"
-    t.datetime "date_de_livraison"
+    t.bigint "cour_id", null: false
     t.string "payement"
-    t.text "enseigne"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["client_id"], name: "index_commandes_on_client_id"
+    t.index ["cour_id"], name: "index_commandes_on_cour_id"
+  end
+
+  create_table "cours", force: :cascade do |t|
+    t.string "package"
+    t.string "durée"
+    t.string "prix"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   add_foreign_key "commandes", "clients"
+  add_foreign_key "commandes", "cours"
 end

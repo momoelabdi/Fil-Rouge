@@ -1,0 +1,8 @@
+[
+  {"id":1, "cour":"Privé", "durée":"4 heures / 2x 2 heures", "prix": "60 Euro" },
+  {"id":2, "cour":"Perivé", "durée":"10 heures / 5x 2 heures", "prix": "150 Euro" },
+  {"id":3, "cour":"Semi-privé", "durée":"4 heures / 2x 2 heures", "prix": "40 Euro" },
+  {"id":4, "cour":"Semi-privé", "durée":"10 heures / 5x 2 heures", "prix": "100 Euro" },
+  {"id":5, "cour":"Groupe", "durée":"4 heures / 2x 2 heures", "prix": "30 Euro" },
+  {"id":6, "cour":"Groupe", "durée":"10 heures / 5x 2 heures", "prix": "80 Euro" }
+]
