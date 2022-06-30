@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  commande_id: MyString
+  client: one
+  products: MyText
+  date: 2022-06-30 13:10:10
+  date_de_livraison: 2022-06-30 13:10:10
+  payement: MyString
+  enseigne: MyText
+
+two:
+  commande_id: MyString
+  client: two
+  products: MyText
+  date: 2022-06-30 13:10:10
+  date_de_livraison: 2022-06-30 13:10:10
+  payement: MyString
+  enseigne: MyText
