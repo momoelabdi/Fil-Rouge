@@ -9,7 +9,7 @@ function App() {
   return (
     <div>
       <Navbar />
-      {/* The data fetched from the two apis below */}
+      {/* The data fetched from the two UHA 4.0 apis below, uncomment them to display the data*/}
       {/* <Clients />
       <Commandes /> */}
       <Footer />
