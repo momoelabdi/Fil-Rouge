@@ -5,3 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+# Client.create(nom:"fred", pseudo:"fredo", mail:"fred@gmail.fr", client_id:1, adresse: "5 rue du jardin", interets: "manga, commics, sport,  mobilier gamer", age: 19)
+# Client.create(nom: "Van Dame", pseudo: "JCVD", mail: "leauCestBon@hotmail.fr", client_id: 3, adresse: "belgique", interets: "jardin, piscine, bricolage" ,age: 57)
+# Client.create(nom: "Bourgeois", pseudo:"Docteur Bourgeois", mail:"florent.bourgeois@uha.fr", client_id:4, adresse: "UHA 4.0", interets:" jardin, bricolage, cuisine", age: 666)
+# Client.create(nom: "Dickinson", pseudo:"The trooper", mail:"singer@ironMaiden.uk", client_id:5, adresse: "Strange World", interets:"musique, japon, rock ,piscine" , age:59)
+# Client.create(nom: "edward", pseudo: "ed", mail: "fullMetalAlchemist@uha.fr", client_id: 2, adresse: "10 rue de l'homonculus ; amestris", interets: "alchimie, pierre philosophale, armures, sport", age:14)

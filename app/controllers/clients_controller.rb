@@ -1,12 +1,11 @@
 class ClientsController < ApplicationController
 
-  # def index
+  def index
   #   @client = @data.App(data),
-  #   @client = Clients.all
-  # end
-
-  def show
-    @client = Clients.find(params[:pseudo, :nom])
+    # @clients = Client.all
   end
 
+  def show
+    # @client = Clients.find(params[:pseudo, :nom])
+  end
 end

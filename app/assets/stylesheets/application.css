@@ -17,7 +17,7 @@
 
 
 
- /* #nav {
+ #nav {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   padding: 5%;
@@ -118,12 +118,9 @@
 .fobar {
   text-decoration: none;
   color: #FFFF;
-
-
 }
 
 .footer > .contacts {
-
   margin-left: 15%;
   width: 100%;
   height: auto;
@@ -135,9 +132,7 @@
 }
 
 
-.contacts h2 {
 
-}
 
 .contacts a {
   text-decoration: none;
@@ -289,8 +284,8 @@ a:hover {
 }
 
 body {
-	background: rgb(2, 4, 8);
-	color: rgb(255, 255, 255);
+	background: rgb(40, 101, 223);
+	color: rgb(208, 41, 41);
 
 	font-size: calc(1em + 0.5vw);
 }
@@ -402,4 +397,4 @@ aside p {
 
 .prices > .project {
   margin-right: 5%;
-} */
+}
