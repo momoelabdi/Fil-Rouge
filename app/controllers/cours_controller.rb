@@ -1,8 +1,7 @@
 class CoursController < ApplicationController
 
   def index
-    @cours = Cour.all
-    render json: @cours
+
   end
 
   def show
