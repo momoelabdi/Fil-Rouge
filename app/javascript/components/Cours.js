@@ -13,7 +13,7 @@ function Cours() {
       {data?.map(d  => {
         return(
           <div key={d.id}>
-            <p>the the package we prepared for you :{d.package}</p>
+            <p>the the package cou booked :{d.package}</p>
             <p>the cours duration :{d.durée}</p>
             <p>The price :{d.prix}</p>
           </div>

@@ -2,7 +2,7 @@ import React from 'react';
 import Usefetch from '../components/Usefetch.';
 
 function Clients() {
-  const {data, loading, error} = Usefetch("https://filrouge.uha4point0.fr/V2/shop/clients");
+  const {data, loading, error} = Usefetch("/clients");
   if (loading) {<h1>Loading...</h1>};
   if (error) console.log(error);
   console.log(data)
