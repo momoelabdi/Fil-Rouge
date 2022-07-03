@@ -7,7 +7,7 @@ class CommandesController < ApplicationController
 
   def create
     @commandes = Commande.new(commandes_params)
-
+    @cours = Cour.find(params [:cours_id])
     if @commandes.save
       render json: @commandes
     else
