@@ -1,21 +1,23 @@
 import React from 'react';
-import windsurf from "../images/windsurf.jpg"
 import "./App.css";
+import Cours from './Cours';
 
 
 
 function Home() {
   return (
     <div className='home'>
-      <div className='navbar'>
-        <h1>WINDSURFING ELEMENTS </h1>
-     </div>
-     <div className="banner" style={{backgroundImage: url("../images/windsurf.jpg")}}>
+     <div className="banner">
         <div className="container">
-          <h1>Le Wagon brings <strong>tech skills</strong> to <strong>creative people</strong>!</h1>
-          <p>Change your life and learn to code at one of our campuses around the world.</p>
-          <a className="btn btn-flat" href="#">Apply now</a>
+          <h1>Le Fil Rouge brings <strong> Water sports skills</strong> to <strong>adventuros people</strong>!</h1>
+          <p>Change your life and learn to windsurf at one of our campuses around the world.</p>
         </div>
+      </div>
+      <div className='infos'>
+      <p className="">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+      </div>
+      <div>
+        <Cours />
       </div>
     </div>
    );
