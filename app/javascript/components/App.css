@@ -1,33 +1,14 @@
 
-
-
-.navbar > img {
-
-  width: 100%;
-  height: 100%;
-}
-
-
-.navbar {
-  /* background-image: url("../images/windsurf.jpg") ; */
-  display: grid;
-  grid-template-columns: 1fr;
-
-
-
-}
-
-
-
 .banner {
   background-size: cover;
   background-position: center;
   padding: 150px 0;
+  background-image: url("../images/home.jpg");
 }
 
 .banner h1 {
-  margin: 0;
-  color: white;
+  margin: 0%;
+  color: rgb(244, 245, 250);
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   font-size: 32px;
   font-weight: bold;
@@ -38,4 +19,49 @@
   color: white;
   opacity: .7;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+.infos {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding-top: 10%;
+}
+
+.infos > p {
+  margin-left: 8%;
+}
+
+
+
+.cours-card{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+}
+
+.cours-card > img {
+  width: 100%;
+  height: auto;
+
+}
+
+.cours-details{
+  text-align: center;
+  border-radius: 5%;
+  background-color: aquamarine;
+}
+
+.offers {
+  text-align: center;
+  text-decoration: underline crimson  ;
+}
+
+
+
+
+.cours-details > img {
+  width: 100%;
+  height: auto;
+  border-radius:  5%;
+
 }
