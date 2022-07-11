@@ -11,6 +11,11 @@ function Commandes() {
   console.log(data);
   return (
     <div>
+      <div>
+        <section>
+          <input className="input" type="text" placeholder="Your name"></input>
+        </section>
+      </div>
       <h2>Comandes details </h2>
       {data?.map((d) => {
         return (
@@ -21,7 +26,10 @@ function Commandes() {
           </div>
         );
       })}
-     </div>  );
+
+    </div>
+
+     );
 }
 
 export default Commandes;

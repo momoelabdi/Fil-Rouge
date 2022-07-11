@@ -18,7 +18,7 @@ function Home() {
         </div>
       </div>
       <div className="infos">
-        <h1>The Ocean vibes </h1>
+        <h1>The Ocean vibes</h1>
         <p className="">
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry's standard dummy text ever
@@ -33,28 +33,6 @@ function Home() {
       </div>
       <div>
         <Cours />
-      </div>
-      <div className="footer">
-        <div className="footer-links">
-          <a href="#">
-            <i className="fab fa-github"></i>
-          </a>
-          <a href="#">
-            <i className="fab fa-instagram"></i>
-          </a>
-          <a href="#">
-            <i className="fab fa-facebook"></i>
-          </a>
-          <a href="#">
-            <i className="fab fa-twitter"></i>
-          </a>
-          <a href="#">
-            <i className="fab fa-linkedin"></i>
-          </a>
-        </div>
-        <div className="footer-copyright">
-          This footer is made with <i className="fas fa-heart"></i> at Le Wagon
-        </div>
       </div>
     </div>
   );
