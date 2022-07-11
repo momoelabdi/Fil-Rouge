@@ -18,5 +18,4 @@ class CommandesController < ApplicationController
   def commandes_params
     params.permit(:cour_id, :client_id, :date_de_reservation, :payement)
   end
-
 end

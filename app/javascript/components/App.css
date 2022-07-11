@@ -21,23 +21,32 @@
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
 
+.container  {
+  text-align: center;
+  padding-top: 15%;
+}
+
 .infos {
   display: grid;
   grid-template-columns: 1fr;
-  padding-top: 10%;
+  /* padding-top: 5%; */
+  text-align: center;
 }
 
 .infos > p {
-  margin-left: 8%;
+
 }
+.infos > h1 {
 
-
+}
 
 .cours-card{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 10px;
+  gap: 10%;
+  margin: 5%;
 }
+
 
 .cours-card > img {
   width: 100%;
@@ -64,4 +73,32 @@
   height: auto;
   border-radius:  5%;
 
+}
+
+
+.footer {
+  background: #271414;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100px;
+  padding: 0px 50px;
+  color: rgba(0,0,0,0.3);
+}
+.footer-links {
+  display: flex;
+  align-items: center;
+}
+.footer-links a {
+  color: black;
+  opacity: 0.15;
+  text-decoration: none;
+  font-size: 24px;
+  padding: 0px 10px;
+}
+.footer-links a:hover {
+  opacity: 1;
+}
+.footer .fa-heart {
+  color: #D23333;
 }
