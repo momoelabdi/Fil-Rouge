@@ -15,8 +15,13 @@ class CommandesController < ApplicationController
     end
   end
 
+  def destroy
+    @commandes.destroy
+
+    render json: { notice: 'Your booking was successfully canceled.' }
+  end
+
   def commandes_params
     params.permit(:cour_id, :client_id, :date_de_reservation, :payement)
   end
-
 end

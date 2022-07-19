@@ -17,9 +17,18 @@ function Usefetch(url) {
             setLoading(false);
         });
     }, [url])
+    const addCommandes = () => {
+      setLoading(true);
+      axios.post(url).then((response) => {
+          setData(response.data);
+      }).catch((error) => {
+          setError(console.log(error));
+      }).finally(() => {
+          setLoading(false);
+      });
+  }
 
-
-    return {data, loading, error}
+    return {data, loading, error, addCommandes}
 }
 
 export default Usefetch;
