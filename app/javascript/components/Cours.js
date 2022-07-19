@@ -1,8 +1,8 @@
 import React from "react";
 import Usefetch from "../components/Usefetch.";
 import "./App.css";
-import home01 from "../images/home01.jpg"
-
+import home01 from "../images/home01.jpg";
+import { Link } from "react-router-dom";
 
 function Cours() {
   const { data, loading, error } = Usefetch("/cours");
@@ -13,19 +13,34 @@ function Cours() {
   console.log(data);
   return (
     <div>
-        <h2 className="offers">Our offers</h2>
+      <h2 className="offers">Our offers</h2>
       <div className="cours-card">
         {data?.map((d) => {
           return (
             <div className="cours-details" key={d.id}>
               <img src={home01} alt="" />
               <h3>the package cou booked :{d.package}</h3>
-              <p>the cours duration: <em>{d.durée}</em></p>
-              <p>The price : <strong>{d.prix}</strong></p>
+              <p>
+                the cours duration: <em>{d.durée}</em>
+              </p>
+              <p>
+                The price : <strong>{d.prix}</strong>
+              </p>
+              <Link to="./commandes">
+                <button type="button" className="btn btn-info">
+                  Book it
+                </button>
+              </Link>
             </div>
           );
         })}
       </div>
+      {/* <Router>
+        <Link className='navBar' to="commandes"> Commandes</Link>
+        <Routes>
+        <Route path="/commandes" element={<Commandes />} />
+        </Routes>
+      </Router> */}
     </div>
   );
 }

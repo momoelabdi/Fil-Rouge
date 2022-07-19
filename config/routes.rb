@@ -7,6 +7,5 @@ Rails.application.routes.draw do
   post "/commandes", to: "commandes#create"
   delete 'commandes/:id', to: 'commandes#destroy'
   get "/clients", to: "clients#new"
-
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
