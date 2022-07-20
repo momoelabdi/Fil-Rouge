@@ -1,8 +1,13 @@
 class CommandesController < ApplicationController
 
-  def new
+  def index
     @commandes = Commande.all
+    # redirect_to cour_commandes_path
     render json: @commandes
+  end
+
+  def new
+    @commades = Commande.new
   end
 
   def create
@@ -22,6 +27,6 @@ class CommandesController < ApplicationController
   end
 
   def commandes_params
-    params.permit(:cour_id, :client_id, :date_de_reservation, :payement)
+    params.permit(:client_name, :client_email, :cour_id, :check_in, :check_out)
   end
 end

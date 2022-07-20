@@ -1,3 +1,3 @@
 class Cour < ApplicationRecord
-  has_many :commande
+  belongs_to :commande
 end
