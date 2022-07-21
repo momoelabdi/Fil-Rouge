@@ -17,6 +17,7 @@ function Usefetch(url) {
             setLoading(false);
         });
     }, [url])
+
     return {data, loading, error}
 }
 

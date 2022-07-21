@@ -5,7 +5,8 @@ class ClientsController < ApplicationController
     render json: @clients
   end
 
-  # def show
-  #   # @client = Clients.find(params[:pseudo, :nom])
-  # end
+  def create
+    @clients = Client.new
+  end
+
 end
