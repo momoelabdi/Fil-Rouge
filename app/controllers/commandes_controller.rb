@@ -1,23 +1,26 @@
 class CommandesController < ApplicationController
-
+  before_action :set_commande, only: [:index, :new, :create, :destroy, :update]
+  skip_before_action :verify_authenticity_token
   def index
     @commandes = Commande.all
-    # redirect_to cour_commandes_path
     render json: @commandes
   end
 
   def new
-    @commades = Commande.new
+    @commandes = Commande.new
   end
 
   def create
     @commandes = Commande.new(commandes_params)
-    @cours = Cour.find(params [:cours_id])
     if @commandes.save
       render json: @commandes
     else
       render json: @commandes.errors
     end
+  end
+
+  def update
+
   end
 
   def destroy
@@ -26,7 +29,13 @@ class CommandesController < ApplicationController
     render json: { notice: 'Your booking was successfully canceled.' }
   end
 
+  private
+
+  def set_commande
+    # @commandes = Commande.find(params[:id])
+  end
+
   def commandes_params
-    params.permit(:client_name, :client_email, :cour_id, :check_in, :check_out)
+    params.permit(:client_name, :client_email, :check_in, :check_out)
   end
 end
