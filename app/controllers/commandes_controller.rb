@@ -1,6 +1,7 @@
 class CommandesController < ApplicationController
   before_action :set_commande, only: [:index, :new, :create, :destroy, :update]
   skip_before_action :verify_authenticity_token
+
   def index
     @commandes = Commande.all
     render json: @commandes
@@ -35,7 +36,11 @@ class CommandesController < ApplicationController
     # @commandes = Commande.find(params[:id])
   end
 
+  # def client_params
+  #   params.permit(:nom, :mail, :client_id)
+  # end
+
   def commandes_params
-    params.permit(:client_name, :client_email, :check_in, :check_out)
+    params.permit([:client_name, :client_email, :check_in, :check_out])
   end
 end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_07_20_162522) do
+ActiveRecord::Schema.define(version: 2022_07_27_102331) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,7 +19,6 @@ ActiveRecord::Schema.define(version: 2022_07_20_162522) do
     t.string "nom"
     t.string "pseudo"
     t.string "mail"
-    t.integer "client_id"
     t.text "adresse"
     t.text "interets"
     t.integer "age"
@@ -29,8 +28,6 @@ ActiveRecord::Schema.define(version: 2022_07_20_162522) do
 
   create_table "commandes", force: :cascade do |t|
     t.string "date_de_reservation"
-    t.bigint "client_id", null: false
-    t.bigint "cour_id", null: false
     t.string "payement"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -38,8 +35,6 @@ ActiveRecord::Schema.define(version: 2022_07_20_162522) do
     t.string "client_email"
     t.string "check_in"
     t.string "check_out"
-    t.index ["client_id"], name: "index_commandes_on_client_id"
-    t.index ["cour_id"], name: "index_commandes_on_cour_id"
   end
 
   create_table "cours", force: :cascade do |t|
@@ -50,6 +45,4 @@ ActiveRecord::Schema.define(version: 2022_07_20_162522) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  add_foreign_key "commandes", "clients"
-  add_foreign_key "commandes", "cours"
 end

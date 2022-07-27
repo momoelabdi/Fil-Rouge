@@ -19,17 +19,19 @@ function Cours() {
           return (
             <div className="cours-details" key={d.id}>
               <img src={home01} alt="" />
-              <h3>the package cou booked :{d.package}</h3>
+              <h4>Our packages :{d.package}</h4>
               <p>
                 the cours duration: <em>{d.durée}</em>
               </p>
               <p>
-                The price : <strong>{d.prix}</strong>
+                Package price : <strong>{d.prix}</strong>
               </p>
               <Link to="./commandes">
                 <button type="button" className="btn btn-info">
                   Book it
                 </button>
+                {/* <a className="btn btn-m btn-success">Create Product</a> */}
+
               </Link>
             </div>
           );
