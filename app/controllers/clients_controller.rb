@@ -6,7 +6,15 @@ class ClientsController < ApplicationController
   end
 
   def create
-    @clients = Client.new
+    @clients = Client.new(client_params)
+    if @clients.save
+      render json: @clients
+    end
+  end
+
+
+  def client_params
+    params.permit([:nom, :mail])
   end
 
 end
