@@ -1,13 +1,14 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link  } from "react-router-dom";
 import Clients from './Clients';
-import Commandes from './Commandes';
+import Commande from './Commande';
 import Cours from './Cours';
 import Home from "./Home";
+import Test from "./Test";
 import "./App.css";
 
 
-// import { Routes } from 'react-router-dom';
+
 
 function App() {
 
@@ -16,25 +17,19 @@ function App() {
         <Router>
             <nav id='nav'>
               <Link className='navBar' to="/">Home</Link>
-              <Link className='navBar' to="commandes"> Commandes</Link>
+              <Link className='navBar' to="commande"> Commande</Link>
               <Link className='navBar' to="client"> Clients</Link>
               <Link className='navBar' to="cours"> Cours</Link>
+              <Link className='navBar' to="test"> Test</Link>
             </nav>
             <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/commandes" element={<Commandes />} />
-            <Route path="/client" element={<Clients />} />
-            <Route path="/cours" element={<Cours />} />
+              <Route path="/" element={<Home />} />
+              <Route path="/commande" element={<Commande />} />
+              <Route path="/client" element={<Clients />} />
+              <Route path="/cours" element={<Cours />} />
+              <Route path="/Test" element={<Test />} />
           </Routes>
         </Router>
-
-        {/* The data fetched from the two UHA 4.0 apis below, uncomment them to display the data*/}
-        {/* <Clients />
-        <Commandes /> */}
-          {/* <Commandes />
-          <Cours />
-        <Footer /> */}
-
     </div>
   );
 }
