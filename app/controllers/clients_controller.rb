@@ -1,13 +1,8 @@
 class ClientsController < ApplicationController
 
-  def index
-
-  end
-
-
   def new
     @clients = Client.all
-    render json: @clients
+    # render json: @clients
   end
 
   def create

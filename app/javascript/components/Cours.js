@@ -30,8 +30,6 @@ function Cours() {
                 <button type="button" className="btn btn-info">
                   Book it
                 </button>
-                {/* <a className="btn btn-m btn-success">Create Product</a> */}
-
               </Link>
             </div>
           );
