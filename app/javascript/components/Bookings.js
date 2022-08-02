@@ -1,29 +1,9 @@
 import React from 'react';
-import Usefetch from "./Usefetch.";
-import "./App.css";
-// import axios from "axios";
 
-function Commande() {
-  const { data, loading, error } = Usefetch("/commandes");
-  if (loading) {
-    <h1>Loading...</h1>;
-  }
-  if (error) console.log(error);
-  console.log(data);
-
+function Booking() {
   return (
+
     <div>
-      <h2>Comandes details </h2>
-      {/* {data?.map((d) => {
-        return (
-          <div key={d.id}>
-            <p>client id :{d.client_id}</p>
-            <p>cours id :{d.cour_id}</p>
-            <p>Payement :{d.payement}</p>
-          </div>
-        );
-      })} */}
-      <div>
         <form action="/commandes" method="post" id="form">
           <div className="form-group">
             <label htmlFor="name">Your Name</label>
@@ -53,11 +33,13 @@ function Commande() {
               <input type="date" className="form-control" id="checkout" name="check_out"  required/>
             </div>
           </div>
-          <button type="submit" className="btn btn-primary">Book it</button>
+          <button type="submit" className="btn btn-sm btn-primary" ></button>
+          {/* <Link to="/clients">Book it</Link> */}
         </form>
       </div>
-    </div>
-  );
+
+
+   );
 }
 
-export default Commande;
+export default Booking;

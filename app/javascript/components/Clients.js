@@ -1,5 +1,6 @@
 import React from 'react';
 import Usefetch from '../components/Usefetch.';
+import { Link } from "react-router-dom";
 
 function Clients() {
   const {data, loading, error} = Usefetch("/clients");
@@ -18,7 +19,8 @@ function Clients() {
           </div>
         )
       })}
-
+          <Link to="/cours">Book it <button type="submit" className="btn btn-primary" ></button>
+          </Link>
 
     </div>
   );

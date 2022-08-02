@@ -20,6 +20,11 @@ class CommandesController < ApplicationController
     end
   end
 
+  def show
+    @commandes.last
+    render json: @commandes
+  end
+
   def update
 
   end
