@@ -1,8 +1,7 @@
-import React from 'react';
+import React from "react";
 import { Link } from "react-router-dom";
 import Usefetch from "./Usefetch.";
 import "./App.css";
-// import axios from "axios";
 
 function Commande() {
   const { data, loading, error } = Usefetch("/commandes");
@@ -15,49 +14,20 @@ function Commande() {
   return (
     <div>
       <h2>Bookings details </h2>
-      {/* {data?.map((d) => {
-        return (
-          <div key={d.id}>
-            <p>client id :{d.client_id}</p>
-            <p>cours id :{d.cour_id}</p>
-            <p>Payement :{d.payement}</p>
-          </div>
-        );
-      })} */}
-      {/* <div>
-        <form action="/commandes" method="post" id="form">
-          <div className="form-group">
-            <label htmlFor="name">Your Name</label>
-            <input className="form-control"
-              type="text" id="name"
-              name="client_name"
-              placeholder="Full Name ..." required
-            />
-          </div>
-          <div className="form-group">
-            <label htmlFor="email">Your E-mail</label>
-            <input className="form-control"
-              type="email"
-              id="email"
-              name="client_email"
-              placeholder="Email..." required
-
-            />
-          </div>
-          <div className="form-row">
-            <div className="form-group col-6">
-              <label htmlFor="checkin">Check-in Date</label>
-              <input type="date" className="form-control" id="checkin" name="check_in"  required />
+      {data?.map((d, i, { length }) => {
+        if (i === length - 1) {
+          return (
+            <div key={d.id}>
+              <p>Thank you dear {d.client_name} </p>
+              <p>
+                {" "}
+                We have saved your booking details to our calender under the
+                following account {d.client_email}
+              </p>
             </div>
-            <div className="form-group col-6">
-              <label htmlFor="checkout">Check-out Date</label>
-              <input type="date" className="form-control" id="checkout" name="check_out"  required/>
-            </div>
-          </div>
-          <button type="submit" className="btn btn-sm btn-primary" ></button>
-          {/* <Link to="/clients">Book it</Link> */}
-        {/* </form> */}
-      {/* </div> */}
+          );
+        }
+      })}
     </div>
   );
 }

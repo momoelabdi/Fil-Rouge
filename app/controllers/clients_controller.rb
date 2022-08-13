@@ -2,7 +2,7 @@ class ClientsController < ApplicationController
 
   def new
     @clients = Client.all
-    # render json: @clients
+    render json: @clients
   end
 
   def create
@@ -12,9 +12,7 @@ class ClientsController < ApplicationController
     end
   end
 
-
   def client_params
-    params.permit([:nom, :mail])
+   params.permit([:nom, :mail])
   end
-
 end

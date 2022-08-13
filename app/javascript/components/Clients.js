@@ -11,11 +11,16 @@ function Clients() {
     <div>
 
       <h2>Clients details </h2>
-      {data?.map(d  => {
+      {data?.map((d, i, { length }) => {
+        if (i === length - 1)
         return(
           <div key={d.id}>
-            <p>name :{d.nom}</p>
-            <p>nickname :{d.pseudo}</p>
+            <p>First name : {d.nom}</p>
+            <p>Last name :{d.pseudo}</p>
+            <p>Email : {d.mail}</p>
+            <p>Adress : {d.adresse}</p>
+            <p>Interests : {d.interets}</p>
+            <p>Age :  {d.age}</p>
           </div>
         )
       })}

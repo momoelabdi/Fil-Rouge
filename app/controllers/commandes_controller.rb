@@ -41,10 +41,6 @@ class CommandesController < ApplicationController
     # @commandes = Commande.find(params[:id])
   end
 
-  # def client_params
-  #   params.permit(:nom, :mail, :client_id)
-  # end
-
   def commandes_params
     params.permit([:client_name, :client_email, :check_in, :check_out])
   end

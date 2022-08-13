@@ -19,28 +19,22 @@ function Cours() {
           return (
             <div className="cours-details" key={d.id}>
               <img src={home01} alt="" />
-              <h4>Our packages :{d.package}</h4>
+              <h4> Packages :{d.package}</h4>
               <p>
-                the cours duration: <em>{d.durée}</em>
+                The cours duration: <em>{d.durée}</em>
               </p>
               <p>
                 Package price : <strong>{d.prix}</strong>
               </p>
-              <Link to="./commandes">
+              <Link to="/bookings">
                 <button type="button" className="btn btn-info">
-                  Book it
+                  Booking
                 </button>
               </Link>
             </div>
           );
         })}
       </div>
-      {/* <Router>
-        <Link className='navBar' to="commandes"> Commandes</Link>
-        <Routes>
-        <Route path="/commandes" element={<Commandes />} />
-        </Routes>
-      </Router> */}
     </div>
   );
 }
