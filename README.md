@@ -7,7 +7,7 @@ Things you may want to cover:
 
 * Ruby version
 To install the latest ruby version and set it as the default version.
-Run this command, it will take a while (5-10 minutes)
+Run this command, it will **take a while (5-10 minutes)**
 
 rbenv install 3.1.2
 
