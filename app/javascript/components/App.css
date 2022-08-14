@@ -101,14 +101,14 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   padding: 1%;
-  background-color: #bf0603;
+  background-color: black;
 
 }
 
 .navBar{
   text-align: center;
   padding-left: 15%;
-  color: rgb(18, 11, 11);
+  color: rgb(231, 25, 18);;
   text-decoration: none;
 }
 
