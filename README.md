@@ -19,6 +19,7 @@ Run this command, it will **take a while (5-10 minutes)**</br>
   <code> rbenv install 3.1.2 </code></br>
   Once the ruby installation is done, run this command to tell the system to use the 3.1.2 version by default.</br>
   <code> rbenv global 3.1.2 </code></br>
+  
 <h2>Yarn </h2></br>
 <p> yarn is a package manager to install JavaScript libraries. Let's install it:</br>
 
@@ -29,9 +30,6 @@ In a terminal, run the following commands:</p></br>
 
 
 
-
-* Database creation </br> 
-** Database initialization </br>
   
   <h2>PostgreSQL</h2>
   PostgreSQL, an open-source robust and production-ready database system. </b>
