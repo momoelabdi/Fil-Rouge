@@ -47,8 +47,8 @@ In a terminal, run the following commands:</p></br>
    Then clone the repository to your HDD </br>
     And run the follwing command in your terminal</br>
     
-    <pre><code> rails server </code></pre>
-    
+   <pre> <code>rails server </code></pre></br>
+   
    *On your browser go to the following URL</br>
    
    <pre><code> http://localhost:3000 </code> </pre></br>
