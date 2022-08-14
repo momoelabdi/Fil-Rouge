@@ -8,8 +8,7 @@ function Confirmations() {
   return (
 
     <div className="confirmations">
-      <h1> I am confirmed </h1>
-      <Commandes />
+        <Commandes />
     </div>
   );
 }

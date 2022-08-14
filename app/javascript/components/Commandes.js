@@ -13,17 +13,20 @@ function Commande() {
 
   return (
     <div>
-      <h2>Bookings details </h2>
+      <h2>YOUR BOOKING DETIAILS </h2>
       {data?.map((d, i, { length }) => {
         if (i === length - 1) {
           return (
             <div key={d.id}>
-              <p>Thank you dear {d.client_name} </p>
+              <h3>Dear {d.client_name} </h3>
               <p>
                 {" "}
-                We have saved your booking details to our calender under the
-                following account {d.client_email}
+                We are happy to announce you that you have successfully
+                submmitted your booking, and we have saved it under the following adress  {d.client_email}
               </p>
+              <p>We are looking forward to have you among us </p>
+              <p>Thank you for your trust and see soon</p>
+              <p>Your File Rouge surfing Adventure </p>
             </div>
           );
         }
