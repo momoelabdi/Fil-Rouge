@@ -40,3 +40,14 @@ In a terminal, run the following commands:</p></br>
   <h2>Rails</h2></br>
       To install rails run the following command</br>
   <pre> <code> $ gem install rails </code></pre></br>
+  
+  
+  <h2>Run the application</h2></br>
+   Once you have installed all the necessary tools. </br>
+   Then clone the repository to your HDD </br>
+    And run the follwing command in your terminal <pre></br>
+    <pre> rails server </pre></br>
+    
+    On your browser go to the following port</br>
+   <pre> http://localhost:3000/ <pre></br>
+    
