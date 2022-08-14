@@ -12,7 +12,7 @@ Open a terminal and run:</br>
 <code> /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" </code></br>
 
 
-* <h2>Ruby version </h2>
+ <h2>Ruby version </h2>
 To install the latest ruby version and set it as the default version.</br>
 Run this command, it will **take a while (5-10 minutes)**</br>
 
@@ -36,9 +36,7 @@ In a terminal, run the following commands:</p></br>
   To install it run the following commands </b>
   <code> brew install postgresql </code></br>
   <code>brew services start postgresql </code></br>
-
-
-* How to run the the app suite
-
-
-* ...
+  
+  <h2>Rails</h2></br>
+      To install rails run the following command</br>
+  <pre> <code> $ gem install rails </code></pre></br>
