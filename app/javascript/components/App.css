@@ -27,30 +27,33 @@
 }
 
 .infos {
-  display: grid;
-  grid-template-columns: 1fr;
-  /* padding-top: 5%; */
-  text-align: center;
+  padding: 10%;
+  text-align: left;
+}
+
+.infos h2 {
+  color: rgb(226, 102, 77);
 }
 
 .cours-card{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 10%;
+  gap: 2%;
   margin: 5%;
+
 }
 
 
 .cours-card > img {
   width: 100%;
   height: auto;
-
 }
 
 .cours-details{
   text-align: center;
-  border-radius: 5%;
-  background-color: aquamarine;
+  border-radius: 5px;
+  background-color:#bfe1fa;
+  padding: 5%;
 }
 
 .offers {
@@ -58,13 +61,9 @@
   text-decoration: underline crimson  ;
 }
 
-
-
-
 .cours-details > img {
   width: 100%;
   height: auto;
-  /* border-radius:  5%; */
 
 }
 
@@ -100,8 +99,10 @@
 
 #nav {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   padding: 1%;
+  background-color: #bf0603;
+
 }
 
 .navBar{
@@ -109,10 +110,82 @@
   padding-left: 15%;
   color: rgb(18, 11, 11);
   text-decoration: none;
-  font-family: 'Roboto ', monospace;
-
 }
 
 #nav :hover {
   color: rgb(40, 162, 162);
+}
+
+
+/* @import url('https://fonts.googleapis.com/css?family=Rubik&display=swap'); */
+.container-fluid{
+    overflow:hidden;
+    margin-top: 300px ;
+    background:#262626 ;
+    color: #627482  !important;
+    margin-bottom: -20% ;
+    padding-bottom: 0  ;
+  }
+
+
+small{
+    font-size: calc(12px + (15 - 12) * ((100vw - 360px) / (1600 - 360))) !important;
+}
+
+.bold-text{
+    color: #989c9e !important;
+}
+
+
+.mt-55{
+    margin-top: calc(50px + (60 - 50) * ((100vw - 360px) / (1600 - 360))) !important;
+}
+
+
+h3{
+    font-size: calc(34px + (40 - 34) * ((100vw - 360px) / (1600 - 360))) !important;
+}
+
+.social{
+    font-size: 21px !important;
+}
+
+.rights{
+    font-size: calc(10px + (12 - 10) * ((100vw - 360px) / (1600 - 360))) !important;
+}
+
+.bookings {
+  border-radius: 20px;
+  background-color: #4ea8de;
+  margin: 5%;
+  padding: 10%;
+}
+
+#book-btn {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20%;
+  margin-top: 5%;
+
+}
+
+.lessons {
+  padding: 10%;
+  text-align: left;
+}
+
+.lessons h2 {
+  color: rgb(226, 102, 77);
+}
+
+.confirmations {
+  margin: 5%;
+  background-color: #2ecc40;
+  padding: 10%;
+  text-align: left;
+  border-radius: 10px;
+}
+
+.list-unstyled a {
+  text-decoration: none;
 }

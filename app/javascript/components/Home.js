@@ -19,17 +19,15 @@ function Home() {
       </div>
 
       <div className="infos">
-        <h1>The Ocean vibes</h1>
+        <h2>OUR MISSION IS TO HELP PEOPLE TO DISCOVER WATERSPORTS.</h2>
         <p className="">
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book. It has survived not only
-          five centuries, but also the leap into electronic typesetting,
-          remaining essentially unchanged. It was popularised in the 1960s with
-          the release of Letraset sheets containing Lorem Ipsum passages, and
-          more recently with desktop publishing software like Aldus PageMaker
-          including versions of Lorem Ipsum.
+          We offer you the maximum action program and professional instruction
+          in all areas and conditions on the water – be it surfboarding, alone or with an instructor, in Egypt,
+          the Caribbean, the Indian Ocean, on the Canaries or in southern Spain.
+          Here you will find everything worth knowing about your preferred
+          sport, and, if you are still a complete novice in this area, you can
+          be sure of discovering a deep and lasting passion for water sports, a
+          passion we have all been seized with. For us, it is a way of life.
         </p>
       </div>
       <div>

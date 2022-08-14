@@ -7,6 +7,7 @@ import Bookings from "./Bookings";
 import Confirmations from "./Confirmations";
 import Home from "./Home";
 import Offers from "./Offers";
+import Footer from "./Footer";
 import "./App.css";
 
 function App() {
@@ -30,10 +31,10 @@ function App() {
             {" "}
             Booking
           </Link>
-          <Link className="navBar" to="confirmations">
+          {/* <Link className="navBar" to="confirmations">
             {" "}
             Confirmations
-          </Link>
+          </Link> */}
         </nav>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -43,8 +44,10 @@ function App() {
           <Route path="/clients" element={<Clients />} />
           <Route path="/cours" element={<Cours />} />
           <Route path="/offers" element={<Offers />} />
+          <Route path="/footer" element={<Footer />} />
         </Routes>
       </Router>
+      <Footer />
     </div>
   );
 }

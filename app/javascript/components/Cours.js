@@ -13,22 +13,22 @@ function Cours() {
   console.log(data);
   return (
     <div>
-      <h2 className="offers">Our offers</h2>
+      <h2 className="offers">ALL OUR OFFERS</h2>
       <div className="cours-card">
         {data?.map((d) => {
           return (
             <div className="cours-details" key={d.id}>
               <img src={home01} alt="" />
-              <h4> Packages :{d.package}</h4>
+              <h4> PACKAGES :{d.package}</h4>
               <p>
-                The cours duration: <em>{d.durée}</em>
+                PACKAGE DETALS: <em>{d.durée}</em>
               </p>
               <p>
-                Package price : <strong>{d.prix}</strong>
+                PACKAGE PRICE : <strong>{d.prix}</strong>
               </p>
               <Link to="/bookings">
-                <button type="button" className="btn btn-info">
-                  Booking
+                <button type="button" className="btn btn-danger">
+                  BOOK NOW
                 </button>
               </Link>
             </div>
