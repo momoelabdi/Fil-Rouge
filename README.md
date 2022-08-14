@@ -42,12 +42,14 @@ In a terminal, run the following commands:</p></br>
   <pre> <code> $ gem install rails </code></pre></br>
   
   
-  <h2>Run the application</h2></br>
+  <h2>Run the application.</h2></br>
    Once you have installed all the necessary tools. </br>
    Then clone the repository to your HDD </br>
     And run the follwing command in your terminal</br>
-    <pre><code> rails server </code> </pre></br>.
     
-    <p>On your browser go to the following port</p></br>
+    <pre><code> rails server </code></pre></br>.
+    
+   *On your browser go to the following port</br>
+   
    <pre><code> http://localhost:3000/ </code> </pre></br>
     
