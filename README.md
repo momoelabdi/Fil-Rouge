@@ -49,6 +49,9 @@ In a terminal, run the following commands:</p></br>
     
    <pre> <code>rails server </code></pre></br>
    
+   *To run the console 
+    <pre> <code>rails console </code></pre></br>
+   
    *On your browser go to the following URL</br>
    
    <pre><code> http://localhost:3000 </code> </pre></br>
