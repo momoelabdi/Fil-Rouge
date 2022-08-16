@@ -44,8 +44,8 @@ In a terminal, run the following commands:</p></br>
   
   <h2>Run the application.</h2></br>
    *Once you have installed all the necessary tools. </br>
-   Then clone the repository to your HDD </br>
-    And run the follwing command in your terminal</br>
+   Clone the repository to your HDD </br>
+    To  run the app copy the follwing command in your terminal</br>
     
    <pre> <code>rails server </code></pre></br>
    
